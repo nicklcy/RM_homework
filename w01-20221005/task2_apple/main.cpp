@@ -3,7 +3,7 @@
 #include <vector>
 
 cv::Mat get_red(const cv::Mat& img);
-cv::Mat get_shown(const cv::Mat &img, const cv::Mat &msk, int);
+cv::Mat get_shown(const cv::Mat &img, const cv::Mat &msk, int); // 调参时使用
 void draw_apple(cv::Mat &img, const cv::Mat &msk);
 
 int main(int argc, char *argv[]) {
@@ -48,7 +48,7 @@ cv::Mat get_red(const cv::Mat &img) {
 	return res_msk;
 }
 
-// 突显出原图像 msk 为 t 的部分
+// 突显出原图像 msk 为 t 的部分（调参时使用）
 cv::Mat get_shown(const cv::Mat &img, const cv::Mat &msk, int t) {
 	assert(img.size() == msk.size());
 	// 转换为 HSV
