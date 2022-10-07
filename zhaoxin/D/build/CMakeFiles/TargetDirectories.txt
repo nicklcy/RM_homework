@@ -1,3 +1,0 @@
-/home/lcy/sjtu/robomaster/2023_zhaoxin/src/D/build/CMakeFiles/main.dir
-/home/lcy/sjtu/robomaster/2023_zhaoxin/src/D/build/CMakeFiles/edit_cache.dir
-/home/lcy/sjtu/robomaster/2023_zhaoxin/src/D/build/CMakeFiles/rebuild_cache.dir
