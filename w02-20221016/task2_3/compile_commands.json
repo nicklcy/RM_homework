@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/lcy/Documents/sjtu/robomaster/2023_peixun/RM_homework/w02-20221016/task2_3/task2_camera/build",
+  "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3  -o CMakeFiles/main.dir/main.cpp.o -c /home/lcy/Documents/sjtu/robomaster/2023_peixun/RM_homework/w02-20221016/task2_3/task2_camera/main.cpp",
+  "file": "/home/lcy/Documents/sjtu/robomaster/2023_peixun/RM_homework/w02-20221016/task2_3/task2_camera/main.cpp"
+}
+]

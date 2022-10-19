@@ -8,7 +8,7 @@ struct ProcessVideo {
 
 	cv::Mat get_bullet(const cv::Mat &img); // 提取子弹轨迹
 	std::vector<cv::Point2f> get_vertices(const cv::RotatedRect &rect); // RotatedRect 四个顶点
-	cv::Point2f get_mid_point(const std::vector<cv::Point> &contour); // 找出轮廓中点
+	cv::Point2f get_mid_point(const cv::Mat &img, const std::vector<cv::Point> &contour); // 找出轮廓中点
 	std::pair<cv::Point2f, int> process_bullet(cv::Mat &img, const std::vector<cv::Point> &contour); // 处理子弹
 	cv::Mat process_new_frame(const cv::Mat &img); // 处理新一帧
 };
@@ -80,11 +80,18 @@ std::vector<cv::Point2f> ProcessVideo::get_vertices(const cv::RotatedRect &rect)
 	return std::vector<cv::Point2f>(vertices, vertices + 4);
 }
 
-cv::Point2f ProcessVideo::get_mid_point(const std::vector<cv::Point> &contour) { // 找出拐弯轮廓中点
+cv::Point2f ProcessVideo::get_mid_point(const cv::Mat &img, const std::vector<cv::Point> &contour) { // 找出拐弯轮廓中点
 	// 拟合成四边形
 	std::vector<cv::Point> poly_vec;
 	cv::approxPolyDP(contour, poly_vec, 5, true);
 	uint32_t n = poly_vec.size();
+	cv::Mat tmp = img.clone();
+	for (uint8_t i = 0; i < n; ++i) {
+		cv::line(tmp, poly_vec[i], poly_vec[(i + 1) % n], cv::Scalar(0, 0, 255), 1);
+	}
+	std::cerr << "==== " << n << std::endl;
+	cv::imshow("tmp", tmp);
+	cv::waitKey();
 	if (n == 2) {
 		return 0.5 * static_cast<cv::Point2f>(poly_vec[0] + poly_vec[1]);
 	}
@@ -135,7 +142,7 @@ std::pair<cv::Point2f, int> ProcessVideo::process_bullet(
 	// 通过实际轮廓面积与外接矩形面积比，判断是否拐弯
 	cv::Point2f center;
 	if (is_turning) { // 是拐弯
-		center = this->get_mid_point(contour);
+		center = this->get_mid_point(img, contour);
 	} else {
 		center = rect.center; // 非拐弯，中点即为矩形中心
 	}
@@ -171,6 +178,7 @@ std::pair<cv::Point2f, int> ProcessVideo::process_bullet(
 }
 
 cv::Mat ProcessVideo::process_new_frame(const cv::Mat &img) {
+	std::cerr << "========= " << std::endl;
 	cv::Mat res = img.clone();
 	cv::Mat mask = this->get_bullet(img);
 

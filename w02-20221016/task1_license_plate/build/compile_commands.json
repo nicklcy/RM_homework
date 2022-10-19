@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/lcy/Documents/sjtu/robomaster/2023_peixun/RM_homework/w02-20221016/task1_license_plate/build",
+  "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4  -o CMakeFiles/main.dir/main.cpp.o -c /home/lcy/Documents/sjtu/robomaster/2023_peixun/RM_homework/w02-20221016/task1_license_plate/main.cpp",
+  "file": "/home/lcy/Documents/sjtu/robomaster/2023_peixun/RM_homework/w02-20221016/task1_license_plate/main.cpp"
+}
+]
