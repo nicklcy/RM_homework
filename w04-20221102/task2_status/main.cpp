@@ -57,7 +57,7 @@ public:
 int main() {
   const size_t DIM1 = 3, DIM2 = 1;
   Eigen::Matrix<double, DIM1, DIM1> A;
-  A << 1, 1, 0, 0, 1, 1, 0, 0, 1;
+  A << 1, 1, .5, 0, 1, 1, 0, 0, 1;
   Eigen::Matrix<double, DIM1, DIM2> C;
   C << 1, 0, 0;
   Eigen::Matrix<double, DIM1, DIM1> Q;
