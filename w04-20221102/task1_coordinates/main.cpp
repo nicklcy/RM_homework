@@ -27,13 +27,11 @@ int main() {
 void doit() {
   cv::Mat rvec, tvec;
   cv::solvePnP(PW_BIG, armor_img, camera_matrix, dist_coeffs, rvec, tvec);
-	std::cerr << "dist_coeffs: " << dist_coeffs << '\n';
-  std::cerr << "* tvec: " << tvec << '\n';
 
   Eigen::Matrix3d mat;
-  mat << -9.99945760e-01, -9.96630453e-03, 2.95451283e-03,
-		3.08115920e-03, -1.27160549e-02, 9.99914289e-01,
-		-9.92788188e-03, 9.99869347e-01, 1.27462745e-02;
+  mat << -9.99945760e-01, -9.96630453e-03, 2.95451283e-03, 3.08115920e-03,
+      -1.27160549e-02, 9.99914289e-01, -9.92788188e-03, 9.99869347e-01,
+      1.27462745e-02;
 
   Eigen::Vector3d vec{tvec.at<double>(0, 0), tvec.at<double>(1, 0),
                       tvec.at<double>(2, 0)};
