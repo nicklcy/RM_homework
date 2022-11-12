@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task2_depth/build",
+  "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/main.dir/main.cpp.o -c /home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task2_depth/main.cpp",
+  "file": "/home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task2_depth/main.cpp"
+},
+{
+  "directory": "/home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task2_depth/build",
+  "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/main.dir/VO.cpp.o -c /home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task2_depth/VO.cpp",
+  "file": "/home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task2_depth/VO.cpp"
+}
+]

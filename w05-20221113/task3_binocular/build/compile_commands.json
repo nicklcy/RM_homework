@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task3_binocular/build",
+  "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/main.dir/main.cpp.o -c /home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task3_binocular/main.cpp",
+  "file": "/home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task3_binocular/main.cpp"
+},
+{
+  "directory": "/home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task3_binocular/build",
+  "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/main.dir/detect_infantry.cpp.o -c /home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task3_binocular/detect_infantry.cpp",
+  "file": "/home/lcy/sjtu/robomaster/2023_peixun/RM_homework/w05-20221113/task3_binocular/detect_infantry.cpp"
+}
+]
